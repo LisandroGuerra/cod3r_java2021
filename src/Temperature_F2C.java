@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Temperature {
+public class Temperature_F2C {
 
     public static void main(String[] args) {
         // (ºF - 32) * 5/9 = ºC
@@ -9,11 +9,12 @@ public class Temperature {
         double fahrenheit;
         double celsius;
 
-        System.out.println("Enter the temperature in ºF: ");
+        System.out.print("Enter the temperature in ºF: ");
         Scanner temperature = new Scanner(System.in);
         fahrenheit = Double.parseDouble(temperature.nextLine());
+        temperature.close();
 
         celsius = (fahrenheit - OFFSET) * FACTOR;
-        System.out.println(fahrenheit + "ºF corresponds to " + celsius + "ºC.");
+        System.out.printf("%.2fºF corresponds to %.2fºC.", fahrenheit, celsius);
     }
 }
